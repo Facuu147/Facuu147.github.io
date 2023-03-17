@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body{
+    /* cambiamos la dirección del eje principal para que el Nav Bar
+    y el contenido principal esté uno abajo del otro */
+    background-color: #bfbfbf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header{
+    background-color: #65727c;
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 85px;
+}
+
+header h2{
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0 1px;
+}
+
+header h2:hover{
+    transform: scale(1.15);      /* se le hace zoom al elemento cuando posicionas el mouse sobre él */
+    color: orange;
+}
+
+header .nav_links{
+    list-style: none;
+}
+
+header .nav_links li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header .nav_links li:hover{
+    transform: scale(1.1);
+}
+
+header .nav_links a{
+    color: #f1ecec;
+    text-decoration: none;
+}
+
+header .nav_links a:hover{
+    color: orange;
+}
+
+header .btn button{
+    font-weight: 700;
+    font-size: 16px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+header .btn button:hover{
+    color: orange;
+    transform: scale(1.1);
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 1000px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;      /* posicionamos los elementos de "container" en 2 columnas que representen "main" y "aside" */
+}
+
+main{
+    position: relative;
+    background: #fff;
+    padding: 40px
+}
+
+main section{
+    padding-bottom: 7px;
+    border-bottom: 1px solid #450000;
+    margin-bottom: 30px;
+}
+
+section h1{
+    font-size: 34px;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    color: #d31212;
+}
+
+section .profesion{
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.titulos_1{
+    color: #871217;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
+
+section .contenido{
+    display: flex;
+    margin: 20px 0 13px 0;
+}
+
+section .año{
+    min-width: 150px;
+}
+
+section .año h4{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+section .contenido .descripción h3{
+    text-transform: uppercase;
+    color: darkorange;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+section .empleo .descripción h4{
+    font-style: italic;
+    margin-bottom: 3px;
+}
+
+section .descripción ul{
+    margin: 0 20px
+}
+
+section .descripción ul li{
+    list-style-type: square;
+}
+
+section .formación .descripción h4{
+    font-style: italic;
+    font-weight: 600;
+}
+
+section .lenguaje{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+section .lenguaje h4{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+section .lenguaje .porcentaje{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #b7aeae;
+}
+
+section .lenguaje .porcentaje div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: darkorange;
+}
+
+aside{
+    position: relative;
+    background: #aa141a;
+    padding: 40px
+}
+
+.img_perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(24 20 20 / 80%);
+}
+
+.img_perfil img{
+    width: 280px;
+}
+
+.titulo_aside{
+    display: none;
+}
+.titulo_aside .name{
+    color: black;
+}
+
+aside section{
+    padding-top: 30px;
+    color: #fff;
+}
+
+.titulos_2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+aside section ul{
+    position: relative;
+}
+
+aside section ul li{
+    position: relative;
+    list-style: none;
+    margin: 11px 0;
+}
+aside .contactos ul li{
+    max-width: 286.68px;
+    display: grid;
+    grid-template-columns: 27px 1fr;
+}
+
+aside section ul li .icon{
+    font-size: 18px;
+    color: orange;
+}
+
+aside section .porcentaje{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #2a2f30;
+    display: block;
+    margin: 5px 0;
+}
+
+aside section .porcentaje div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: orange;
+}
+
+aside section .nivel{
+    font-style: italic;
+}
+
+@media only screen and (max-width: 1100px){
+    header h2:hover{
+        transform: scale(1.1);
+    }
+}
+
+@media only screen and (max-width: 1035px){
+    header .nav_links li {
+        margin: 4px 10px;
+    }
+}
+
+@media only screen and (max-width: 1023px){
+    .container{
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    main .nombre_perfil1{
+        display: none;
+    }
+    .titulo_aside{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 930px){
+    header .nav_links{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media only screen and (max-width: 855px){
+    header .nav_links{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media only screen and (max-width: 740px){
+    header .nav_links{
+        grid-template-columns: repeat(2,1fr);
+    }
+    header{
+        height: 100px
+    }
+}
+
+@media only screen and (max-width: 650px){
+    section .contenido{
+        flex-direction: column;
+    }
+    section .año h4{
+        margin-bottom: 3px;
+    }
+    section .lenguaje{
+        grid-template-columns: repeat(1,1fr);
+    }
+    section .lenguaje h4{
+        margin-bottom: 3px;
+    }    
+}   
+
+@media only screen and (max-width: 630px){
+    header h2:hover{
+        transform: none;
+    }
+    header .btn button:hover{
+        transform: none;
+    }
+}
